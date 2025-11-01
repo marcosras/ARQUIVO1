@@ -13,15 +13,24 @@ if (temp=="" || isNaN(Number(temp))){
     let kc = (Number(temp)-273.15).toFixed(2)
     let kf = ((Number(temp)-273.15)*9/5+32).toFixed(2)
     
-    if(race.checked){
+        if(race.checked){
         var result= document.getElementById("result")
         result.innerHTML=`${temp}°C equivale a ${cf}°F<br>${temp}°C equivale a ${ck}K`
+        if(Number(temp)<=-273.15){
+            result.innerHTML += "<br><abbr title='essa temperatura é menor ou igual ao zero absoluto'>*</abbr>"
+        }
     }else if(rafa.checked){
         var result= document.getElementById("result")
         result.innerHTML=`${temp}°F equivale a ${fc}ºC<br>${temp}°F equivale a ${fk}K`
+        if(Number(temp)<=-459.67){
+            result.innerHTML += "<br><abbr title='essa temperatura é menor ou igual ao zero absoluto'>*</abbr>"
+        }
     }else if(rake.checked){
         var result= document.getElementById("result")
         result.innerHTML=`${temp}K equivale a ${kc}°C<br>${temp}K equivale a ${kf}°F`
+        if(Number(temp)<=0){
+            result.innerHTML += "<br><abbr title='essa temperatura é menor ou igual ao zero absoluto'>*</abbr>"
+        }
     }
 }
 }
