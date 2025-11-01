@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="temperature_icon-icons.com_65084.ico">
+</head>
+<body>
+    <header><h1>CONVERSOR DE TEMPERATURA</h1></header>
+    <section>
+        <div class="div1">
+        <p class="p1">Digite o valor numérico da temperatura que vai ser convertida abaixo:</p>
+        <input type="number" id="n1">
+        <div class="secdiv">
+        <input type="radio" name="radio" checked class="radio" id="race"><span class="cfk">Celsius</span>
+        <input type="radio" name="radio" class="radio" id="rafa"><span class="cfk">Fahrenheit</span>
+        <input type="radio" name="radio" class="radio" id="rake"><span class="cfk">Kelvin</span>
+       </div>
+        <div class="buttom"><input type="button" value="CONVERTER" onclick="converter()" class="converter"></div>
+        <p id="result"></p>
+    </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
